@@ -1,5 +1,7 @@
 # Project Quickstart Skill
 
+[中文说明](README.zh-CN.md)
+
 A Codex skill that helps students, job seekers, and new contributors quickly understand unfamiliar software repositories.
 
 It guides an agent to inspect a repo, build a learner-friendly mental model, produce interview-ready talking points, and avoid overclaiming by citing evidence and verification status.
