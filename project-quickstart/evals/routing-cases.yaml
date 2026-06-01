@@ -1,0 +1,74 @@
+skill: project-quickstart
+description_under_test: "Load when the user wants fast orientation to an unfamiliar software repo for interviews, resumes, coursework, onboarding, contribution prep, or asks what files to read first, how to explain the project, architecture, data flow, tech stack, or project story."
+
+positive:
+  - query: "Help me quickly understand this GitHub project so I can explain it in an interview."
+    expected: load
+    reason: "Explicit project understanding plus interview context."
+  - query: "I am a junior student and just cloned this repo. Which files should I read first?"
+    expected: load
+    reason: "Learner wants a reading path through an unfamiliar repo."
+  - query: "Turn this project into resume-ready project experience and list the technical highlights."
+    expected: load
+    reason: "Portfolio/resume explanation requires project mental model."
+  - query: "What are this repo's architecture and main data flow?"
+    expected: load
+    reason: "Direct architecture and data-flow understanding request."
+  - query: "Wo xiang kuaisu lijie zhege xiangmu, mian shi yao jiang."
+    expected: load
+    reason: "Romanized Chinese-like query still signals fast project understanding for interviews."
+
+negative:
+  - query: "Format these JavaScript files."
+    expected: do_not_load
+    reason: "Pure formatting has no project-understanding intent."
+  - query: "Fix this TypeScript error."
+    expected: do_not_load
+    reason: "Debugging only; load another skill unless the user asks to understand the project."
+  - query: "Add a badge to README."
+    expected: do_not_load
+    reason: "Small documentation edit without onboarding or learner context."
+  - query: "Install dependencies and start the project."
+    expected: do_not_load
+    reason: "Run/setup only; trigger only if user also asks what the project is or how to study it."
+
+edge:
+  - query: "This PR only changes one log line. Should I review it?"
+    expected: do_not_load
+    reason: "PR review routing should win; not a project onboarding request."
+  - query: "Is this project worth putting on my resume?"
+    expected: load
+    reason: "Requires understanding project value, scope, and interview positioning."
+  - query: "Check whether this repo has security issues."
+    expected: do_not_load
+    reason: "Security audit intent is primary; project summary may be incidental."
+  - query: "I want to open my first issue in this open-source project. Help me get familiar first."
+    expected: load
+    reason: "Contribution prep through repo onboarding."
+
+behavior_checks:
+  - name: "evidence-backed summary"
+    prompt: "Use the skill on a small web repo and explain it for an internship interview."
+    must_include:
+      - "one-sentence project summary"
+      - "file-backed architecture map"
+      - "Mermaid architecture or flow diagram"
+      - "evidence map"
+      - "strengths, risks, and improvement opportunities"
+      - "reading path"
+      - "interview talking points"
+      - "uncertainties or unverified assumptions"
+      - "commands/tests run or not run"
+  - name: "no overclaiming"
+    prompt: "Turn an unfamiliar open-source repo into resume bullets."
+    must_include:
+      - "ownership-safe wording"
+      - "warnings against claiming full authorship unless true"
+      - "30-second, 1-minute, or 3-minute pitch structure when useful"
+  - name: "same-repo comparison"
+    prompt: "Compare a no-skill and skill-assisted project explanation for the same repository."
+    must_include:
+      - "same repository warning if inputs are different"
+      - "route quality"
+      - "output quality"
+      - "evidence and uncertainty quality"

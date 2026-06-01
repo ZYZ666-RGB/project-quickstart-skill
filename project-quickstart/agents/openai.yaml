@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Quickstart"
+  short_description: "Help learners understand unfamiliar repos fast."
+  default_prompt: "Use $project-quickstart to help me understand this repository and prepare an interview-ready project brief."
