@@ -64,12 +64,12 @@ Turn this project into resume-ready project experience and list the technical hi
 
 ```text
 project-quickstart/
-├── SKILL.md
-├── agents/openai.yaml
-├── assets/project-brief-template.md
-├── evals/routing-cases.yaml
-├── references/output-rubric.md
-└── scripts/repo_snapshot.py
++-- SKILL.md
++-- agents/openai.yaml
++-- assets/project-brief-template.md
++-- evals/routing-cases.yaml
++-- references/output-rubric.md
++-- scripts/repo_snapshot.py
 ```
 
 ## Evals
