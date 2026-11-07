@@ -50,6 +50,10 @@ python project-quickstart/scripts/repo_snapshot.py /path/to/repo
 
 Treat the snapshot as a map, not ground truth — the skill still reads the real files.
 
+## Example output
+
+A filled-in pass is in [`examples/tiny-brief.md`](examples/tiny-brief.md). It starts from a short prompt against the teaching fixture [`examples/tiny-notes-cli`](examples/tiny-notes-cli/) and follows the brief sections above. File paths in that page are real, and the verification block says which commands were run.
+
 ## Install
 
 Clone, then copy the skill folder into your Codex skills directory.
@@ -99,6 +103,9 @@ project-quickstart/
 ├── evals/routing-cases.yaml      # positive / negative / edge routing tests
 ├── references/output-rubric.md   # quality bar for polished briefs
 └── scripts/repo_snapshot.py      # optional structural scan
+examples/
+├── tiny-brief.md                 # worked example: prompt plus sample brief
+└── tiny-notes-cli/               # small CLI the example inspects
 ```
 
 ## Design principles

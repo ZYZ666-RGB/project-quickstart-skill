@@ -60,6 +60,10 @@ Use $project-quickstart to help me understand this repository and prepare an int
 帮我把这个项目整理成简历项目经历，并列出技术亮点。
 ```
 
+## 示例产出
+
+完整示例见 [`examples/tiny-brief.md`](examples/tiny-brief.md)（英文）。它用仓库里的教学小项目 [`examples/tiny-notes-cli`](examples/tiny-notes-cli/) 走一遍：先给出一句使用请求，再按 Skill 的章节写出项目速查。文中的结论指向这个小项目里的真实文件，并写明哪些命令跑过、哪些没有。
+
 ## 仓库结构
 
 ```text
@@ -70,6 +74,9 @@ project-quickstart/
 +-- evals/routing-cases.yaml
 +-- references/output-rubric.md
 +-- scripts/repo_snapshot.py
+examples/
++-- tiny-brief.md
++-- tiny-notes-cli/
 ```
 
 ## 关键文件说明
@@ -79,6 +86,8 @@ project-quickstart/
 - `project-quickstart/assets/project-brief-template.md`：可复用的项目速查文档模板。
 - `project-quickstart/evals/routing-cases.yaml`：正例、负例和边界路由测试用例。
 - `project-quickstart/scripts/repo_snapshot.py`：快速扫描仓库结构的辅助脚本。
+- `examples/tiny-brief.md`：一份对照教学小项目写成的示例速查。
+- `examples/tiny-notes-cli/`：示例所分析的本地笔记命令行程序。
 
 ## Evals
 
