@@ -4,6 +4,10 @@
 
 **A Codex / OpenAI skill that turns an unfamiliar software repo into an interview-ready project brief in minutes.**
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/ZYZ666-RGB/project-quickstart-skill?style=social)](https://github.com/ZYZ666-RGB/project-quickstart-skill)
+[![Codex skill](https://img.shields.io/badge/OpenAI%20Codex-skill-blue)](project-quickstart/SKILL.md)
+
 Built for students, job seekers, and new contributors who need a fast mental model — architecture, core flows, evidence-backed talking points — without overclaiming.
 
 ---
@@ -104,11 +108,19 @@ project-quickstart/
 - **Learner-friendly** — jargon explained briefly; files tied to product behavior
 - **Interview-safe** — warn when the user should say “I studied/extended this” instead of implying sole authorship
 
+## Discoverability
+
+Search terms this skill is meant to show up for: **Codex skill**, **repo onboarding**, **interview project brief**, **architecture map**, **evidence-backed README walkthrough**.
+
 ## Related
 
 - Skill spec: [`project-quickstart/SKILL.md`](project-quickstart/SKILL.md)
 - Output rubric: [`project-quickstart/references/output-rubric.md`](project-quickstart/references/output-rubric.md)
 - Chinese README: [`README.zh-CN.md`](README.zh-CN.md)
+
+## Contributing
+
+Small docs/examples PRs are welcome — see open [`good first issue`](https://github.com/ZYZ666-RGB/project-quickstart-skill/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) tickets. Please keep changes evidence-based (file paths / commands) and avoid overclaiming in sample briefs.
 
 ## License
 
