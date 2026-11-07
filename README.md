@@ -50,6 +50,11 @@ python project-quickstart/scripts/repo_snapshot.py /path/to/repo
 
 Treat the snapshot as a map, not ground truth — the skill still reads the real files.
 
+### Example output
+
+See the [Remote Job Radar worked example](examples/telegram-job-alerts-brief.md), generated using this skill from an attributed public repository.
+It focuses on one daily-digest flow in a larger application, with source evidence and explicit verification limits.
+
 ## Install
 
 Clone, then copy the skill folder into your Codex skills directory.
